@@ -311,9 +311,11 @@ def load_pickles():
 # =========================
 # ROUTES
 # =========================
+@app.get("/")
+@app.head("/")
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "API is live and running!"}
 
 
 # ---------- HOME FEED (TMDB) ----------
